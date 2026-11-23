@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-body: 'Manrope', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  html {
+    font-family: var(--font-body);
+    background-color: #070D1A;
+    background-image:
+      radial-gradient(circle at 12% 10%, rgba(56, 189, 248, 0.08), transparent 34%),
+      radial-gradient(circle at 86% 12%, rgba(167, 139, 250, 0.08), transparent 36%),
+      radial-gradient(circle at 52% 92%, rgba(16, 185, 129, 0.06), transparent 40%);
+    background-attachment: fixed;
+    color: #F1F5F9;
+    scroll-behavior: smooth;
+  }
+
+  html:not(.dark) {
+    background-color: #F4F7FB;
+    background-image:
+      radial-gradient(circle at 12% 10%, rgba(14, 165, 233, 0.08), transparent 36%),
+      radial-gradient(circle at 86% 12%, rgba(139, 92, 246, 0.07), transparent 38%),
+      radial-gradient(circle at 52% 92%, rgba(16, 185, 129, 0.06), transparent 40%);
+    color: #0F172A;
+  }
+
+  /* Clean light-mode surface mapping for existing dark utility classes */
+  html:not(.dark) .bg-\[\#070D1A\],
+  html:not(.dark) .bg-\[\#070D1A\]\/90 {
+    background-color: #F4F7FB !important;
+  }
+  html:not(.dark) .bg-\[\#080F1F\],
+  html:not(.dark) .bg-\[\#081020\],
+  html:not(.dark) .bg-\[\#09101E\] {
+    background-color: #F8FAFC !important;
+  }
+  html:not(.dark) .bg-\[\#0B1324\] {
+    background-color: #FFFFFF !important;
+  }
+  html:not(.dark) .bg-\[\#0D1629\] {
+    background-color: #FFFFFF !important;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  }
+  html:not(.dark) .bg-slate-800,
+  html:not(.dark) .bg-slate-800\/80,
+  html:not(.dark) .bg-slate-800\/70,
+  html:not(.dark) .bg-slate-800\/90 {
+    background-color: #E2E8F0 !important;
+  }
+  html:not(.dark) .border-slate-800,
+  html:not(.dark) .border-slate-800\/90,
+  html:not(.dark) .border-slate-800\/80,
+  html:not(.dark) .border-slate-700 {
+    border-color: #E2E8F0 !important;
+  }
+  html:not(.dark) .text-white {
+    color: #0F172A !important;
+  }
+  html:not(.dark) .text-slate-100,
+  html:not(.dark) .text-slate-200 {
+    color: #1E293B !important;
+  }
+  html:not(.dark) .text-slate-300 {
+    color: #334155 !important;
+  }
+  html:not(.dark) .text-slate-400 {
+    color: #475569 !important;
+  }
+  html:not(.dark) .text-cyan-300,
+  html:not(.dark) .text-cyan-400 {
+    color: #0369A1 !important;
+  }
+  html:not(.dark) .text-sky-300,
+  html:not(.dark) .text-sky-400 {
+    color: #0284C7 !important;
+  }
+  html:not(.dark) .text-emerald-300,
+  html:not(.dark) .text-emerald-400 {
+    color: #047857 !important;
+  }
+  html:not(.dark) .text-amber-300,
+  html:not(.dark) .text-amber-400 {
+    color: #B45309 !important;
+  }
+  html:not(.dark) .text-violet-300,
+  html:not(.dark) .text-violet-400 {
+    color: #6D28D9 !important;
+  }
+  html:not(.dark) .text-rose-400 {
+    color: #BE123C !important;
+  }
+  html:not(.dark) [class*="bg-gradient-to-r"].text-white,
+  html:not(.dark) [class*="bg-gradient-to-r"] .text-white,
+  html:not(.dark) button[class*="bg-blue-600"].text-white,
+  html:not(.dark) button[class*="bg-emerald-600"].text-white,
+  html:not(.dark) button[class*="bg-rose-600"].text-white,
+  html:not(.dark) button[class*="bg-amber-600"].text-white,
+  html:not(.dark) button[class*="bg-cyan-600"].text-white {
+    color: #FFFFFF !important;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono, .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

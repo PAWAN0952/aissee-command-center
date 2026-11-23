@@ -1,0 +1,16 @@
+{
+  "name": "AISSEE Command Center",
+  "short_name": "AISSEE Prep",
+  "description": "AISSEE Class 9 & Classes 6-10 AI Tutor, Mock Tests, Syllabus & Progress Tracker",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070D1A",
+  "theme_color": "#0EA5E9",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

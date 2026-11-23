@@ -1,0 +1,8 @@
+{
+  "name": "AISSEE Command Center",
+  "description": "Comprehensive All India Sainik Schools Entrance Examination (AISSEE) Class 9 preparation platform featuring official NTA syllabus coverage, full 150-question mock tests, AI personal tutor, and progress analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
